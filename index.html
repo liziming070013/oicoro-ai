@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="description" content="OICORO：为每个家庭而生的 AI 守护中枢。不监控，只理解；不上传影像，只输出照护信号。">
+  <title>OICORO · AI 家庭守护中枢</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="scroll-progress" aria-hidden="true"><span id="progressBar"></span></div>
+
+  <nav class="nav" aria-label="主导航">
+    <a class="wordmark" href="#top" aria-label="OICORO 首页"><i></i>OICORO</a>
+    <div class="nav-links">
+      <a href="#platform">平台</a>
+      <a href="#usecases">场景</a>
+      <a href="#product">产品</a>
+      <a href="#story">故事</a>
+      <a href="#vision">愿景</a>
+    </div>
+    <a class="nav-cta" href="#contact">预约演示 <span>↗</span></a>
+  </nav>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span></span>家庭智能照护中枢</p>
+          <h1 id="heroTitle">Capable, safe,<br><em>caring.</em></h1>
+          <p class="hero-lead">OICORO 在家中安静学习日常节律，将空间、姿态与行为变成可解释的照护信号。只有真正需要时，才温和介入。</p>
+          <div class="hero-actions">
+            <a class="pill dark" href="#story">观看产品故事 <span>↓</span></a>
+            <button class="pill light" id="heroExplode" type="button">探索内部结构</button>
+          </div>
+        </div>
+        <div class="hero-visual" id="heroProduct" data-view="hybrid">
+          <div class="halo" aria-hidden="true"></div>
+          <div class="hero-photo" id="heroPhoto"><img src="./assets/oicoro-hero.png" alt="OICORO AI 家庭守护中枢真实产品摄影" fetchpriority="high" decoding="async"></div>
+          <canvas id="heroCanvas" aria-label="可旋转的 OICORO 设备三维模型"></canvas>
+          <div class="webgl-fallback" id="heroFallback" hidden>
+            <img src="./assets/oicoro-hero.png" alt="OICORO 家庭智能照护设备">
+          </div>
+          <div class="view-switch" role="group" aria-label="产品展示模式">
+            <button type="button" data-view="photo">实拍</button>
+            <button type="button" class="active" data-view="hybrid">融合</button>
+            <button type="button" data-view="twin">数字孪生</button>
+          </div>
+          <p class="drag-hint"><span>↔</span> 拖动旋转 · 点击传感器</p>
+        </div>
+      </div>
+      <div class="trust-row" aria-label="核心特性">
+        <span>端侧 AI</span>
+        <span>无画面上传</span>
+        <span>24/7 静默守护</span>
+        <span>隐私优先设计</span>
+      </div>
+      <div class="scroll-cue">SCROLL TO DISCOVER <i></i></div>
+    </section>
+
+    <!-- FOR EVERYONE -->
+    <section class="for-everyone" id="platform">
+      <p class="overline">CREATE NEW EXPERIENCES</p>
+      <h2 class="section-title">照护，不再是少数人的奢侈品。</h2>
+      <div class="cards-three">
+        <article class="card-feature">
+          <span class="card-tag">For families</span>
+          <h3>为家庭</h3>
+          <p>让独居老人继续住在熟悉的家中，家属通过手机收到的是“可解释的风险简报”，而不是一条刺耳的报警。</p>
+        </article>
+        <article class="card-feature">
+          <span class="card-tag">For caregivers</span>
+          <h3>为照护者</h3>
+          <p>社区护士和护理机构借助个人行为基线，更早发现状态衰退，把干预窗口从“事后响应”提前到“趋势预警”。</p>
+        </article>
+        <article class="card-feature">
+          <span class="card-tag">For communities</span>
+          <h3>为社区</h3>
+          <p>用端侧隐私方案连接家庭、社区与机构，构建可规模化的老龄友好基础设施，而不牺牲数据主权。</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- PLATFORM GRID -->
+    <section class="platform" aria-labelledby="platformTitle">
+      <p class="overline">A MODERN PLATFORM FOR HOME CARE</p>
+      <h2 class="section-title" id="platformTitle">一台设备，<br>四种感知。</h2>
+      <div class="platform-grid">
+        <article class="platform-card large">
+          <div class="platform-icon"><i></i></div>
+          <h3>隐私优先设计</h3>
+          <p>原始影像不离开家庭。设备端完成姿态识别、风险判断与证据链生成，只输出事件、分数与解释。</p>
+        </article>
+        <article class="platform-card">
+          <div class="platform-icon blue"><i></i></div>
+          <h3>多模态感知</h3>
+          <p>RGB-D、热红外、飞行时间与压力传感互相校验，降低单一传感器误报。</p>
+        </article>
+        <article class="platform-card">
+          <div class="platform-icon lime"><i></i></div>
+          <h3>端侧 AI 推理</h3>
+          <p>8 TOPS 神经处理单元在本地运行，响应时间小于 1 秒。</p>
+        </article>
+        <article class="platform-card">
+          <div class="platform-icon"><i></i></div>
+          <h3>可解释决策</h3>
+          <p>每一次报警都说明原因、证据链、风险等级与建议动作。</p>
+        </article>
+        <article class="platform-card wide">
+          <div class="platform-visual" id="platformVisual">
+            <div class="platform-scan" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+            <div class="platform-risk"><span>92</span><small>RISK SCORE</small></div>
+          </div>
+          <h3>持续学习的行为基线</h3>
+          <p>系统用 21 天建立个人作息、步态与空间使用习惯。同样是夜间离床，它会判断这是熟悉的起夜，还是需要关注的变化。</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- USE CASES -->
+    <section class="usecases" id="usecases">
+      <p class="overline">ONE SYSTEM, EVERYDAY CARE</p>
+      <h2 class="section-title">守护发生在生活里。</h2>
+      <div class="usecase-grid">
+        <article class="usecase-card wide" data-scene="bed">
+          <img src="./assets/scene_bed_exit_1280x720.jpg" alt="夜间老人离床场景" loading="lazy" decoding="async">
+          <div class="usecase-overlay">
+            <small>01 · NIGHT EXIT</small>
+            <h3>夜间离床</h3>
+            <p>床垫压力消失，红外热区移动，系统先低亮度引导而不惊扰家属。</p>
+          </div>
+        </article>
+        <article class="usecase-card" data-scene="fall">
+          <img src="./assets/scene_fall_night_living_1280x720.jpg" alt="老人跌倒场景" loading="lazy" decoding="async">
+          <div class="usecase-overlay">
+            <small>02 · FALL</small>
+            <h3>跌倒检测</h3>
+            <p>高度骤降、地面热区停留、语音无回应三源交叉确认。</p>
+          </div>
+        </article>
+        <article class="usecase-card" data-scene="medicine">
+          <img src="./assets/scene_missed_medicine_1280x720.jpg" alt="漏服药场景" loading="lazy" decoding="async">
+          <div class="usecase-overlay">
+            <small>03 · MEDICINE</small>
+            <h3>漏服药</h3>
+            <p>药盒未开启，语音确认失败，AI 根据用药习惯调整提醒强度。</p>
+          </div>
+        </article>
+        <article class="usecase-card wide" data-scene="decline">
+          <img src="./assets/scene_decline_static_1280x720.jpg" alt="状态衰退场景" loading="lazy" decoding="async">
+          <div class="usecase-overlay">
+            <small>04 · DECLINE</small>
+            <h3>状态衰退</h3>
+            <p>活动半径下降、静态行为增加、回应变慢，形成长期趋势预警。</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- BRAND FILM -->
+    <section class="brand-film" id="film" aria-label="OICORO 产品讲解视频">
+      <video id="overviewVideo" src="./media/oicoro-overview.mp4" poster="./assets/oicoro-hero.png" muted loop playsinline preload="metadata"></video>
+      <div class="film-vignette"></div>
+      <div class="film-copy">
+        <p class="overline">16 SEC · PRODUCT FILM</p>
+        <h2>让守护，成为家里<br>最安静的存在。</h2>
+        <p>真实家庭场景与端侧智能的完整产品叙事。</p>
+      </div>
+      <button class="video-control film-control" type="button" data-video="overviewVideo" aria-label="播放产品讲解视频"><i></i><span>播放讲解</span></button>
+      <button class="sound-control" id="soundToggle" type="button" aria-label="开启视频声音">声音关闭</button>
+      <div class="video-progress"><span></span></div>
+    </section>
+
+    <!-- SCROLL STORY -->
+    <section class="story" id="story" aria-label="滚动产品叙事">
+      <div class="story-sticky">
+        <div class="story-visual">
+          <img id="storyImage" src="./assets/scene_bed_exit_1280x720.jpg" alt="夜间老人离床的家庭场景" decoding="async">
+          <div class="story-shade"></div>
+          <div class="scan-map" id="scanMap"><i></i><i></i><i></i><i></i></div>
+          <div class="risk-orbit" id="riskOrbit"><span>64</span><small>RISK</small></div>
+          <div class="decision-toast" id="decisionToast"><i></i><div><b>已开启柔光引导</b><span>暂不打扰家属</span></div><strong>02:34</strong></div>
+        </div>
+        <div class="story-copy">
+          <p class="overline">HOW OICORO CARES <span id="storyIndex">01 / 04</span></p>
+          <div class="story-texts">
+            <article class="story-step active" data-image="scene_bed_exit_1280x720.jpg">
+              <h3>先看见变化。</h3>
+              <p>凌晨 2:34，床垫压力消失。空间感知发现老人起身，比平时慢了 8 秒。</p>
+            </article>
+            <article class="story-step" data-image="scene_bed_exit_1280x720.jpg">
+              <h3>再理解语境。</h3>
+              <p>系统将步态、热区与 21 天个人基线比对。这是一次熟悉的起夜，不是紧急情况。</p>
+            </article>
+            <article class="story-step" data-image="scene_fall_night_living_1280x720.jpg">
+              <h3>只有证据一致，才升级。</h3>
+              <p>高度骤降、地面热区停留、语音无回应。三条证据链把风险提升至 92。</p>
+            </article>
+            <article class="story-step" data-image="scene_fall_night_living_1280x720.jpg">
+              <h3>给出行动，而非焦虑。</h3>
+              <p>先语音确认，再按照护关系通知家属与社区联系人。每一次报警，都能解释为什么。</p>
+            </article>
+          </div>
+          <div class="story-dots" aria-hidden="true"><i class="active"></i><i></i><i></i><i></i></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCT LAB -->
+    <section class="product" id="product">
+      <header class="section-head">
+        <p class="overline">ENGINEERED FOR TRUST</p>
+        <h2 class="section-title">从真实产品，<br>到可解释的数字孪生。</h2>
+        <p>点击模型上的感知模块，理解 OICORO 如何在不上传原始画面的前提下，重建空间语义。</p>
+      </header>
+      <div class="lab">
+        <div class="lab-stage" id="labStage">
+          <div class="lab-photo" aria-hidden="true"></div>
+          <canvas id="labCanvas" aria-label="可点击拆解的 OICORO 产品结构"></canvas>
+          <div class="webgl-fallback" id="labFallback" hidden><img src="./assets/oicoro-360-scenes.png" alt="OICORO 产品结构与使用场景"></div>
+          <div class="hotspot-label" id="hotspotLabel">点击发光节点探索</div>
+          <div class="product-callout c1"><i></i><span><b>RGB-D CAMERA</b>3D 深度感知</span></div>
+          <div class="product-callout c2"><i></i><span><b>THERMAL IR</b>夜间体温感知</span></div>
+          <div class="product-callout c3"><i></i><span><b>EDGE NPU</b>8 TOPS 本地推理</span></div>
+          <div class="lab-controls">
+            <button id="rotateToggle" class="active" type="button"><span>↻</span> 自动旋转</button>
+            <button id="explodeToggle" type="button"><span>＋</span> 拆解结构</button>
+            <button id="flowToggle" class="active" type="button"><span>≈</span> AI 数据流</button>
+          </div>
+        </div>
+        <aside class="sensor-info" aria-live="polite">
+          <p class="overline" id="sensorNo">01 / RGB-D</p>
+          <h3 id="sensorTitle">看见姿态，不识别人脸。</h3>
+          <p id="sensorDesc">融合颜色与深度，理解人体高度、关节位置与空间距离；端侧只保留匿名骨架语义。</p>
+          <dl>
+            <div><dt>感知范围</dt><dd id="sensorRange">0.4–8 m</dd></div>
+            <div><dt>采样</dt><dd id="sensorRate">30 FPS</dd></div>
+            <div><dt>隐私</dt><dd id="sensorPrivacy">端侧脱敏</dd></div>
+          </dl>
+          <div class="sensor-nav">
+            <button id="sensorPrev" type="button" aria-label="上一个传感器">←</button>
+            <span id="sensorCount">1 / 4</span>
+            <button id="sensorNext" type="button" aria-label="下一个传感器">→</button>
+          </div>
+        </aside>
+      </div>
+      <div class="module-film">
+        <div class="module-film-copy">
+          <p class="overline">MODULE FILM · 01</p>
+          <h3>产品结构，一目了然。</h3>
+          <p>将硬件外观、内部传感器与实时数据流放在同一段讲解中，让技术不再需要一页页参数说明。</p>
+          <div class="film-facts"><span>10 SEC</span><span>PRODUCT / SENSOR</span><span>16:9</span></div>
+        </div>
+        <div class="module-film-media">
+          <video id="sensorVideo" src="./media/oicoro-explainer-01.mp4" poster="./assets/oicoro-360-scenes.png" playsinline preload="metadata"></video>
+          <button class="video-control" type="button" data-video="sensorVideo" aria-label="播放产品与传感器讲解"><i></i><span>播放模块讲解</span></button>
+          <div class="video-progress"><span></span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SYSTEM PROOF -->
+    <section class="system-proof" aria-label="AI 决策系统总览">
+      <div class="proof-image proof-video">
+        <video id="decisionVideo" src="./media/oicoro-explainer-02.mp4" poster="./assets/oicoro-ai-system.png" playsinline preload="metadata"></video>
+        <button class="video-control" type="button" data-video="decisionVideo" aria-label="播放 AI 决策链路讲解"><i></i><span>播放 AI 决策讲解</span></button>
+        <div class="video-progress"><span></span></div>
+      </div>
+      <div class="proof-copy">
+        <p class="overline">EXPLAINABLE AI SYSTEM</p>
+        <h2 class="section-title">从感知到行动，<br>每一步都可解释。</h2>
+        <p>不是一个炫技面板，而是一条完整证据链：视觉检测、个人基线、多源验证、风险评分，最后生成给家属真正有用的行动建议。</p>
+        <div class="proof-flow">
+          <span>感知</span><i></i><span>学习</span><i></i><span>验证</span><i></i><span>决策</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- IMAGE WALL -->
+    <section class="image-wall" aria-label="真实照护瞬间">
+      <div class="wall-header">
+        <p class="overline">REAL CARE, REAL PEACE</p>
+        <h2 class="section-title">真实守护，<br>真实安心。</h2>
+      </div>
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee-track">
+          <img src="./assets/scene_bed_exit_1280x720.jpg" alt="">
+          <img src="./assets/scene_fall_night_living_1280x720.jpg" alt="">
+          <img src="./assets/scene_missed_medicine_1280x720.jpg" alt="">
+          <img src="./assets/scene_decline_static_1280x720.jpg" alt="">
+          <img src="./assets/oicoro-hero.png" alt="">
+          <img src="./assets/oicoro-360-scenes.png" alt="">
+          <img src="./assets/oicoro-ai-system.png" alt="">
+        </div>
+        <div class="marquee-track" aria-hidden="true">
+          <img src="./assets/scene_bed_exit_1280x720.jpg" alt="">
+          <img src="./assets/scene_fall_night_living_1280x720.jpg" alt="">
+          <img src="./assets/scene_missed_medicine_1280x720.jpg" alt="">
+          <img src="./assets/scene_decline_static_1280x720.jpg" alt="">
+          <img src="./assets/oicoro-hero.png" alt="">
+          <img src="./assets/oicoro-360-scenes.png" alt="">
+          <img src="./assets/oicoro-ai-system.png" alt="">
+        </div>
+      </div>
+    </section>
+
+    <!-- VISION -->
+    <section class="vision" id="vision">
+      <p class="overline">THE CARE INFRASTRUCTURE</p>
+      <h2 class="section-title">从一台设备，走向<br>家庭照护基础设施。</h2>
+      <div class="vision-grid">
+        <div class="market-orbit">
+          <div class="orbit o1"></div>
+          <div class="orbit o2"></div>
+          <div class="orbit o3"></div>
+          <strong>家庭</strong>
+          <span class="orbit-node n1">家属</span>
+          <span class="orbit-node n2">社区</span>
+          <span class="orbit-node n3">机构</span>
+        </div>
+        <div class="pitch-points">
+          <article><span>01</span><div><h3>硬件入口</h3><p>一次部署，连接家庭中的床垫、药盒、门磁与可穿戴设备。</p></div></article>
+          <article><span>02</span><div><h3>模型复利</h3><p>越了解一个人的日常，越能减少误报，提前识别真实变化。</p></div></article>
+          <article><span>03</span><div><h3>服务网络</h3><p>把风险解释交给正确的人，形成家庭、社区与机构协同。</p></div></article>
+        </div>
+      </div>
+      <div class="traction">
+        <div><small>商业模式</small><b>硬件 + 订阅</b></div>
+        <div><small>目标用户</small><b>独居 / 老龄家庭</b></div>
+        <div><small>核心壁垒</small><b>个人行为模型</b></div>
+        <div><small>数据原则</small><b>端侧优先</b></div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+      <div>
+        <p class="overline">BUILD THE FUTURE OF CARE</p>
+        <h2 class="section-title">让技术退后一步，<br>让安心向前一步。</h2>
+      </div>
+      <a href="mailto:hello@oicoro.ai" class="contact-button">预约产品演示 <span>↗</span></a>
+      <footer>
+        <a class="wordmark" href="#top"><i></i>OICORO</a>
+        <p>AI 家庭守护中枢 · Concept 2026</p>
+        <p>Privacy by design</p>
+      </footer>
+    </section>
+  </main>
+
+  <script src="./vendor/three.min.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
